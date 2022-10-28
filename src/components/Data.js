@@ -4,21 +4,30 @@ import video from './images/1_UINAsA-ZAG8UBYKhENkWiw.gif'
 import { IconButton } from "rsuite";
 import {  Search } from '@rsuite/icons';
 import SortDownIcon from '@rsuite/icons/SortDown';
+
+import { useNavigate } from 'react-router';
+
+
 import miss from './images/8ac5c7f468f6a8686d435263efcf994b2a321369-1177x1224.webp'
 import equity from './images/d6e7c66584a49398201d2cebfef8c39b5a7a5c47-858x700.webp'
 import man from './images/85fc19315ea2838b6faa5d6087a859d00c56498b-1314x1180.webp'
 
 
-
 function Data() {
-    const ButtonStyle = { margin: "0px 10px" };
+    const ButtonStyle = { margin: "0px 10px" }
+    const navigate=useNavigate();
+    const navigateToAuth=()=>{
+        navigate('/Auth')
+    }
+  
+
 
   return (
     <div className='toppest'>
         <div className='information'>
-            <h4>THE LEADING EQUITY PLANNING PLATFORM</h4>
-            <h1>You've got startup equity. Now what?</h1>
-            <p>see your full net worth including your stock options, compare exercise and selling strategies, and see how taxes impact your net gains</p>
+            <h4>THE LEADING DOCUMENT VERIFY PLATFORM</h4>
+            <h1>You've got your documents. Now what?</h1>
+            <p>see your full demonstartion on how smart contacts automatically execute, control events and the agreement between two parties</p>
         </div>
         <div className='img2'>
         <img src={video} alt='video' height={300}/>
@@ -34,8 +43,8 @@ function Data() {
             <h3>Work with a financial advisor to align <br></br>
             your stock options with your financial <br></br>goals.
             </h3>
-            <button href='/' className='button3'>Log in</button>
-            <button href='/' className='button4'>Get started</button>
+            <button onClick={navigateToAuth} className='button4'>Get started</button>
+            <button href='/' className='button3'>Learn more</button>
             </div>
 
             <div className='two'>
@@ -58,8 +67,11 @@ function Data() {
             <h3>Get the cash you need to own your <br></br>
             equity, or get cash for your private <br></br>shares without selling them.
             </h3>
-            <button href='/' className='button6'>Log in</button>
-            <button href='/' className='button5'>Get started</button>
+
+            <button onClick={navigateToAuth} className='button8'>Get started</button>
+
+            <button href='/' className='button7'>Learn more</button>
+
             </div>
         </div>
 
@@ -69,8 +81,10 @@ function Data() {
             <h3>Grow your money through managed <br></br>
             portfolios and exclusive access to  <br></br>private investments.
             </h3>
-            <button href='/' className='button3'>Log in</button>
-            <button href='/' className='button4'>Get started</button>
+
+
+            <button onClick={navigateToAuth} className='button4'>Get started</button>
+            <button href='/' className='button3'>Learn more</button>
             </div>
 
             <div className='two'>
@@ -82,9 +96,9 @@ function Data() {
 
         <div className='divide4'>
             <div className='one4'>
-            <h6>WHY SECFI</h6>
+            <h6>WHY DOCUIFY</h6>
             <h1>
-            Built by startup <br></br>employees
+            SECURE A FASTER <br></br>AND MORE PARTNERSHIP
            </h1>
             </div>
 

@@ -1,0 +1,39 @@
+.nav-holder{
+    /* background-color: red; */
+}
+
+.nav-cont{
+    display: flex;
+    /* background-color: green; */
+    margin-left: 4%;
+    margin-right: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-cont img{
+    width: 150px;
+    height: auto;
+}
+.nav-cont .btn{
+    display: flex;
+    justify-content: center;
+    margin-right: 2%;
+    width: 15%;
+}
+.nav-cont .btn button{
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    /* font-weight: bolder; */
+    font-size: 15px;
+    height: 25%;
+}
+.nav-cont .btn p{
+    margin-top: 1%;
+}
+.auto-type{
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 10%;
+    color: grey;
+}

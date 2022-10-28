@@ -1,15 +1,44 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Data from './components/Data';
-import Slide from './components/Slide';
+import { Routes,Route, BrowserRouter } from 'react-router-dom';
+import Auth from './components/auth/Auth';
+import LandingPage from './components/LandingPage';
+import Profile from './components/profile/Profile';
+import DashBoardPage from './pages/dashBoard';
+import AboutPage from './pages/about/AboutPage';
+import PlanPage from './pages/plan/PlanPage';
+import ContactUsPage from './pages/contactUs/ContactUsPage';
+import Authentication from './components/verifier/vriAuth/Authentication';
+import Verdash from './components/verifier/Verdash';
+import Practice from './pages/practice/Practice'
+
+import {getAuth, onAuthStateChanged} from "firebase/auth";
+import { useEffect } from 'react';
+
 function App() {
+const auth=getAuth();
+const user=auth.currentUser;
+
+
+console.log(user);
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <Data/>
-      <Slide/>
+
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' exact element={<LandingPage/>}/>
+        <Route path='/Auth' element={<Auth/>}/>
+        <Route path='/profile' element={<Profile/>} />
+        <Route path='/Dashboard' element={<DashBoardPage/>}/>
+        <Route path='/About' element={<AboutPage/>}/> 
+      <Route path='/Plan' element={<PlanPage/>}/>
+        <Route path='/ContactUs' element={<ContactUsPage/>}/>
+        <Route path='/authentication' element={<Authentication/>}/>
+       <Route path='/verifierdashboard' element={<Verdash/>}/> 
+         <Route path='/Practice' element={<Practice/>}/>
+
+      </Routes>
+      </BrowserRouter>
+      
     </div>
   );
 }
@@ -44,7 +73,7 @@ export default App;
 //           <Route path="/marketing" element={<Marketing/>}></Route>
 //           <Route path="/development" element={<Development/>}></Route>
 //           <Route path="/design" element={<Design/>}></Route>
-//           <Route path="/consulting" element={<Consulting/>}></Route>
+//           <Route path="/consulting" element={<Consulting/>}></Route> npm start
 //         </Routes>
 
 //       </BrowserRouter>

@@ -1,0 +1,32 @@
+
+.top-row{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 18%;
+    margin-top: 5%;
+}
+.doc-sent{
+    justify-content: space-between;
+    display: flex;
+    padding-inline: 5%;
+    padding-top: 2%;
+}
+.doc-sent button{
+    border: none;
+    background: none;
+}
+.status-span{
+    background-color: #90ee90;
+   align-items: center;
+   text-align: center;
+   border-radius: 25%;
+   padding: 1%;
+}
+.btn-logut{
+    margin-top: 100%;
+    background:#d9d9d9;
+    text-align: center;
+    padding: 20%;
+    border: none;
+    border-radius: 30%;
+}
